@@ -1,0 +1,249 @@
+/* css.gg */
+@import url('https://css.gg/css');
+
+/* UNPKG */
+@import url('https://unpkg.com/css.gg/icons/all.css');
+
+/* JSDelivr */
+@import url('https://cdn.jsdelivr.net/npm/css.gg/icons/all.css');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    /* border: 2px solid red; */
+    height: 100vh;
+    /* background: linear-gradient(to top, black, gba(255, 255, 255, 0.541)); */
+    background: linear-gradient(to right, rgba(234, 98, 98, 1), orange);
+    border-radius: 0px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(.5px);
+    -webkit-backdrop-filter: blur(.5px);
+
+
+}
+
+
+
+.nav {
+    /* border: 2px solid red; */
+    height: 10%;
+    color: black;
+    font-family: 'Roboto Slab', sans-serif;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: white;
+}
+
+.home-icon{
+    position: absolute;
+    left: 0;
+}
+
+.nav > div{
+   /* border: 2px solid white; */
+   padding: 8px 12px;
+   margin: 5px 8px;
+   /* font-style: italic; */
+   /* box-shadow: 1px 1px 1px grey; */
+   cursor: pointer;
+   font-size: .9rem;
+   font-weight: 700;
+}
+
+.nav-links:hover{
+    background-color: rgba(255, 255, 255, 0.473);
+    color: black;
+    transition: 1s;
+    border: 1px solid black;
+    border-radius: 3px 3px;
+}
+
+
+header{
+    /* border: 2px solid red; */
+    height: 70%;
+    margin: 58px 58px;
+    color: white;
+    /* width: 100vw; */
+    padding: 25px 25px;
+    background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    text-shadow: 5px;
+}
+
+.intro{
+    font-family:'Roboto Slab', serif;
+
+}
+
+.intro-list{
+    margin-top: 5px;
+    display: flex;
+    margin: 8px 8px;
+    gap: 15px;
+    font-size: 1.5rem;
+    
+}
+
+.iconify{
+    /* border: 2px solid white; */
+    height: 20vh;
+    margin-top: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.iconify>i{
+    cursor:pointer;
+    transform: scale(var(--ggs,2));
+
+}
+
+
+.portfolio{
+    /* border: 2px solid green; */
+    padding: 0;
+    height: 100vh;
+    /* background: linear-gradient(to left, rgba(0, 153, 255, 0.678), white); */
+    /* From https://css.glass */
+    background: linear-gradient(to right, rgba(234, 98, 98, 1), orange);
+    border-radius: 0px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(.5px);
+    -webkit-backdrop-filter: blur(.5px);
+    color: white;
+}
+
+.p-intro{
+    padding: 35px 55px;
+    font-family:'Roboto Slab', serif;
+
+}
+
+.p-serv{
+    /* border: 2px solid red; */
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    padding: 25px 25px;
+    gap: 8px;
+}
+
+.p-serv > div{
+    flex: 1;
+    background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    text-shadow: 5px;
+    height: 60%;
+    border-radius: 15px;
+    transition: 0.05ms;
+    /* margin: 15px 15px; */
+    align-items: center;
+}
+
+
+
+.com-01>i{
+    transform: scale(var(--ggs,2));
+    margin: 15px 15px;
+    /* position: relative */
+}
+
+.comm{
+    /* padding: 15px 15px; */
+    font-family:'Roboto Slab', serif;
+    padding: 5px 5px;
+    margin: 5px 15px;
+
+}
+
+footer > h3{
+    display: flex;
+    gap: 10px;
+    margin: 15px 15px;
+    justify-content: center;
+    font-family:'Roboto Slab', serif;
+}
+
+a > i{
+    position: absolute;
+    right: 50%;
+    height: 45px;
+    font-size: 2rem;
+}
+
+img:hover{
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
+}
+
+img{
+    height: 90px;
+    width: 90px;
+    transition: 1ms;
+}
+
+
+@media screen and (max-width:733px),
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (-moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx)
+{
+    h1{
+        font-size: 1.5rem;
+    }
+
+    h4{
+        font-size: .5rem;
+    }
+    
+    header{
+        height: 65%;
+    }
+
+    .p-serv > div{
+        height: 50%;
+    }
+
+
+    img{
+        height: 40px;
+        width: 40px;
+        /* padding-bottom: 25px; */
+        
+    }
+
+    .iconify{
+        margin-top: 2px;
+        margin-bottom: 5px;
+    }
+    
+    
+}
+
+
+
+
+
+
+
