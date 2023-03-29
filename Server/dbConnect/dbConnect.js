@@ -2,10 +2,12 @@ const {MongoClient} = require('mongodb')
 const dotenv = require('dotenv').config()
 
 const uri = process.env.CONNECTION_STRING
-
 const client = new MongoClient(uri)
+
 const dbname = 'userCredentials'
-const collection = 'account'
+const collection_name = 'account'
+
+const accountsCollection = client.db(dbname).collection(collection_name)
 
 const connectToDatabase = async() => {
     try{
