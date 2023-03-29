@@ -11,6 +11,7 @@
     "express": "^4.18.2",
     "express-session": "^1.17.3",
     "mongodb": "^5.1.0",
+    "mongoose": "^7.0.3",
     "pbkdf2-password": "^1.2.1"
   }
 }
