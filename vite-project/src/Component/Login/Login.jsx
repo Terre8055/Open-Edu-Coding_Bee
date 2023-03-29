@@ -29,8 +29,8 @@ export default function Login({handleSignIn}){
         }
         fetch('http://localhost:4000/auth/login', header)
         .then(res => res.json())
-        .then(console.log)
-        .catch(err => console.log(err))
+        .then(data => data === 'Success'?handleSignIn('Home'): null)
+        .catch(err => alert('Validation Error'))
 
     }
 
@@ -39,7 +39,7 @@ export default function Login({handleSignIn}){
         <>
             <article className= "shadow-5 br3" >
                 <main className="pa4 white-50">
-                <form className="measure center" onSubmit={handleSubmit} method="post">
+                <form className="measure center" onSubmit={handleSubmit} >
                     <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
                     {/* <legend className="f2 fw6 ph0 mh0 ttu">Sign In</legend> */}
                     <div className="mt3">
