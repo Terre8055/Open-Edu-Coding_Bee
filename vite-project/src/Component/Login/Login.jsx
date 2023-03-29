@@ -27,7 +27,7 @@ export default function Login({handleSignIn}){
           alert("Email and password must be filled out.");
           return;
         }
-        fetch('http://localhost:3000/login', header)
+        fetch('http://localhost:4000/auth/login', header)
         .then(res => res.json())
         .then(handleSignIn('Home'))
         .catch(err => console.log(err))
