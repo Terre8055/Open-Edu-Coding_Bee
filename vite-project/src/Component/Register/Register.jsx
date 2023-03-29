@@ -19,18 +19,32 @@ export default function Register({handleSignIn}){
     const date = new Date();
     const dateYear = date.getFullYear();
 
-    const handleSubmit = (event) => {
-      event.preventDefault();
-      if(!email || !password){
-       alert("Email and Password must be filled Out")
-        return
+    const header = {
+      method: 'post',
+      headers: {'Content-Type':'application/json'},
+      'mode': 'cors',
+      body: JSON.stringify({ 
+          email: email,
+          password: password,
+          firstname: fName,
+          lastname: sName,
+          phone: phone
+
+      })
+  }
+
+  const handleSubmit = (event) => {
+      event.preventDefault();//this method is called to prevent the default nature of the form element
+      if (!email || !password ||!fName || !sName || phone) {
+        alert("Email and password must be filled out.");
+        return;
       }
-      if(password != confPassword){
-        alert("Password does not match")
-        return
-      }
-      handleSignIn('Login')
-    }
+      fetch('http://localhost:4000/auth/register', header)
+      .then(res => res.json())
+      .then(console.log)
+      .catch(err => console.log(err))
+
+  }
     return(
       <main id="main">
           <section className="navAuth" style={myStyles}>

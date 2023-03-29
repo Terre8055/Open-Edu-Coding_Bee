@@ -29,7 +29,7 @@ export default function Login({handleSignIn}){
         }
         fetch('http://localhost:4000/auth/login', header)
         .then(res => res.json())
-        .then(handleSignIn('Home'))
+        .then(console.log)
         .catch(err => console.log(err))
 
     }
