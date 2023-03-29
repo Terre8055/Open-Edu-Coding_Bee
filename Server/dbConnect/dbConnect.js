@@ -1,33 +1,16 @@
-const {MongoClient} = require('mongodb')
-const dotenv = require('dotenv').config()
+const mongoose = require('mongoose')
 
-const uri = process.env.CONNECTION_STRING
-const client = new MongoClient(uri)
 
-const dbname = 'userCredentials'
-const collection_name = 'account'
 
-const accountsCollection = client.db(dbname).collection(collection_name)
-
-const connectToDatabase = async() => {
+const connectDb = async () => {
     try{
-        await client.connect();
-        console.log(`Connected to the ${dbname} database`)
+        const connect = await mongoose.connect(process.env.CONNECTION_STRING)
+        // connect.connection.name = 'mycontacts-backend'
+        console.log("Database connected: ", connect.connection.host, connect.connection.name, connect.connection.port) 
     }catch(err){
-        console.error('Error while connecting to the database')
+        console.log(err);
+        process.exit(1)
     }
 }
 
-const main = async() => {
-    try{
-        await connectToDatabase();
-    }catch(err){
-        console.error('Error connecting to database')
-    }finally{
-        await client.close()
-    }
-}
-
-module.exports = main
-
-
+module.exports = connectDb
