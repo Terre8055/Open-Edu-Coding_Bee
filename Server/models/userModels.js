@@ -18,10 +18,6 @@ const userSchema = mongoose.Schema({
         type: String,
         required: [true, "Please add user password"]
     },
-    confirm_password: {
-        type: String,
-        required: [true, "Please add user password"]
-    },
     phone: {
         type: String,
         required: [true, "Please add user password"]
