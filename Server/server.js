@@ -14,7 +14,12 @@ connectDb()
 const port = process.env.PORT || 3000
 
 //middlewares
-app.use(cors)
+app.use(cors({
+    origin: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+  }));
+
 app.use(bodyParser.json())
 app.use('/auth', router)
 app.use(errorHandler)
