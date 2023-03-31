@@ -8,79 +8,55 @@ export default function Home({handleSignIn}){
         handleSignIn('Login')
     }
     return(
-        <div>
-            <main className="main">
-            <div className="nav">
+        <>
+            <nav className="nav">
                 <div className="home-icon"><i className="gg-home-alt"></i></div>
-                <div className="nav-links">Search</div>
+                <div className="nav-links">Demo</div>
                 <div className="nav-links">Blog</div>
+                <div className="nav-links">Live</div>
                 <div className="nav-links">Help</div>
-                <div className="nav-links" onClick={redirectPage}>LogOut</div>
-            </div>
-            <header>
-                <h1 className="intro">
-                the #1 software engineering platform for young and aspiring engineers
-                like you to develop industry practice
-                </h1>
-                <br />
-                <h3 className="intro-list"><i className="gg-check-o"></i>self-paced</h3>
-                <br />
-                <h3 className="intro-list"><i className="gg-check-o"></i>dynamic</h3>
-                <br />
-                <h3 className="intro-list"><i className="gg-check-o"></i>informative</h3>
-                <br />
-                <h3 className="intro-list">
-                <i className="gg-check-o"></i>24/7 mentoring support
-                </h3>
-                {/* <div className="iconify">
-                <i className="gg-push-chevron-down-o"></i>
-                </div> */}
+                <div className="nav-links" onClick={redirectPage}>SignOut</div>
+            </nav>
+            <header className="intro">
+                <div className="intro-head">
+                    <p className="intro-head-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nam deserunt itaque! Autem doloremque delectus nisi accusamus nam sint saepe explicabo non facere repellendus? Distinctio ea sapiente inventore enim magni.</p>
+                </div>
+                <div className="intro-img">
+                    <img src="\public\home-bkg-images\undraw_Programming_re_kg9v.png" alt="" />
+                </div>
             </header>
-            </main>
-            <article className="portfolio">
-            <h1 className="p-intro">
-                we prioritise hardwork and guarantee a wide range of tech stack
-            </h1>
-            <div className="p-serv">
-                <div className="com-01">
-                <i className="gg-code"></i>
-                <img
-                    id="img"
-                    src="/icons8-javascript-logo-512.png"
-                    alt="JS icon"
-                />
-
-                <img id="img" src="/html.png" alt="html icon" />
-
-                <img id="img" src="/icons8-css3-100.png" alt="css icon" />
+            <section className="sect-props">
+                <div className="props-img">
+                    <img src="\public\home-bkg-images\undraw_Team_up_re_84ok.png" alt="" />
                 </div>
-                <div>
-                <div className="com-01">
-                    <i className="gg-code"></i>
-                    <img src="/icons8-react-200.png" alt="React icon" />
-
-                    <img src="/icons8-angularjs-144.png" alt="angular icon" />
-
-                    <img src="/icons8-vue.js48.png" alt="vue icon" />
+                <div className="props-head">
+                    <p className="props-head-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor accusantium iste, reiciendis in sunt quaerat nemo autem neque maxime. Corporis, accusamus id sunt esse neque expedita explicabo soluta suscipit consequatur?</p>
                 </div>
+            </section>
+            <section className="sect-props">
+                <div className="props-head">
+                    <p className="props-head-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem animi nisi, recusandae, ea vero minus, deleniti unde ex tempore ratione magni non fugit. Nesciunt iste dolorem atque accusantium facere quasi.</p>
                 </div>
-                <div>
-                <div className="com-01"><i className="gg-code"></i></div>
-                <img src="/icons8-node-js-144.png" alt="nodejs icon" />
-
-                <img src="/icons8-express-js-100.png" alt="express icon" />
-
-                <img src="/icons8-postgresql-144.png" alt="postgres icon" />
+                <div className="props-img">
+                    <img src="\public\home-bkg-images\undraw_Freelancer_re_irh4.png" alt="" />
                 </div>
+            </section>
+            {/* <section className="button-links">
+                <button className="home-btn">EXPLORE TUTORIALS</button>
+            </section> */}
+            <div className="line-layout">
+                <hr  className="line-1"/>
+                <hr  className="line-2"/>
+                <hr  className="line-3"/>
+                <hr  className="line-4"/>
             </div>
             <footer>
-                <h3>openEdu-Ghana <i className="gg-copyright"></i> 2023</h3>
-                {/* <a href="https://github.com/Terre8055" target="_blank"
-                ><i className="fa-brands fa-github"></i
-                ></a> */}
+                {/* <hr /> */}
+                <p>this is a footer</p>  
             </footer>
-            </article>
-        </div>
+
+            
+        </>
     )
 }
 
