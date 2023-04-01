@@ -44,6 +44,13 @@ export default function Home({handleSignIn}){
             {/* <section className="button-links">
                 <button className="home-btn">EXPLORE TUTORIALS</button>
             </section> */}
+            <div className="btn-container">
+                <button className="fe-hero-btn">Frontend Development</button>
+                {/* <div className="divider"> */}
+                    <img className="divider-icon"src="\icons8-bee-color-96.png" alt="" />
+                {/* </div> */}
+                <button className="ss-hero-btn">Server-side Development</button>
+            </div>
             <div className="line-layout">
                 <hr  className="line-1"/>
                 <hr  className="line-2"/>

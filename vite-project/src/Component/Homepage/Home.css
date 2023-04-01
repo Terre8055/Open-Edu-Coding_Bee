@@ -14,6 +14,8 @@
     padding: 0;
 }
 
+
+
 .nav {
     /* border: 2px solid red; */
     height: 10%;
@@ -67,6 +69,13 @@
 }
 
 .intro-head-p{
+   /* From https://css.glass */
+    /* background: rgba(255, 255, 255, 0.29);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.9px);
+    -webkit-backdrop-filter: blur(6.9px);
+    border: 1px solid rgba(255, 255, 255, 0.4);  */
     /* border: 2px solid red; */
     padding: 35px;
     margin-top: 50px;
@@ -83,6 +92,7 @@
 .intro-img > img {
     height: 80%;
     width: 100%;
+    
     /* background-size: contain; */
 }
 
@@ -112,6 +122,13 @@
     width: 75%;
     padding: 35px;
     margin-top: 50px;
+    /* From https://css.glass */
+    /* background: rgba(255, 255, 255, 0.29);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.9px);
+    -webkit-backdrop-filter: blur(6.9px);
+    border: 1px solid rgba(255, 255, 255, 0.4); */
 }
 
 .props-img{
@@ -141,7 +158,76 @@
     color:white;
     font-size: 1.5rem;
   }
+
+
+
+  .btn-container{
+    /* border: 2px solid red; */
+    justify-content: center;
+    display: flex;
+    height: 20vh;
+    padding: 50px;
+  }
+
+  .fe-hero-btn{
+    flex: 1 0 40;
+    width: 17rem;
+    height: 3rem;
+    /* position: absolute;
+    left: 40%; */
+    /* From https://css.glass */
+    background: rgba(214, 18, 18, 0.613);
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.9px);
+    -webkit-backdrop-filter: blur(6.9px);
+    border: 1px solid rgba(247, 151, 151, 0.4);
+    font-family: 'Poppins';
+    font-size: 1rem;
+    /* border: 2px solid bisque; */
+    color: white;
+    cursor: pointer;
+    transition: 1.5s;
+  }
+
+  .fe-hero-btn:hover{
+    background: red;
+  }
+
+  .ss-hero-btn{
+    flex: 1 0 40;
+    width: 17rem;
+    height: 3rem;
+    /* position: absolute;
+    left: 40%; */
+    /* From https://css.glass */
+    background: rgba(214, 18, 18, 0.613);
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.9px);
+    -webkit-backdrop-filter: blur(6.9px);
+    border: 1px solid rgba(247, 151, 151, 0.4);
+    font-family: 'Poppins';
+    font-size: 1rem;
+    /* border: 2px solid bisque; */
+    color: white;
+    cursor: pointer;
+    transition: 1.5s;
+  }
+
+  .ss-hero-btn:hover{
+    background: red;
+  }
   
+
+
+   .divider-icon{
+    flex: 1 0 20;
+    height: 80px;
+    margin-bottom: px;
+    
+  }
+
   .line-layout{
     display: flex;
   }
