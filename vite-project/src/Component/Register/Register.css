@@ -144,7 +144,7 @@ h5{
   }
   
 
-button{
+  .register-page-btn{
     margin: 1px 24px;
     padding: 9px 12px;
     /* background-color: black; */
@@ -158,7 +158,7 @@ button{
     
 }
 
-button:hover{
+.register-page-btn:hover{
     background-color: black;
     color: white;
 }

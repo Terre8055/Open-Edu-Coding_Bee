@@ -96,8 +96,8 @@ export default function Register({handleSignIn}){
                     />
                   </div>
                   <div className="hero-btn">
-                    <button  className='register_btn'>REGISTER</button>
-                    <button  className= 'login_btn' onClick={(e) => handleSignIn('Login')}>LOGIN</button>
+                    <button  className='register-page-btn'>REGISTER</button>
+                    <button  className= 'register-page-btn' onClick={(e) => handleSignIn('Login')}>LOGIN</button>
                   </div>
                 </form>
               </div>
