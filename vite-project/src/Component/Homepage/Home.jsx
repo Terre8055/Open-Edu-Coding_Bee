@@ -4,9 +4,15 @@ import './Home.css'
 
 export default function Home({handleSignIn}){
 
-    const redirectPage = (e) => {
+    const redirectPageToLogin = (e) => {
         handleSignIn('Login')
     }
+
+    const redirectPageToFrontend = (e) => {
+        handleSignIn('Frontend')
+    }
+
+
     return(
         <>
             <nav className="nav">
@@ -15,7 +21,7 @@ export default function Home({handleSignIn}){
                 <div className="nav-links">Blog</div>
                 <div className="nav-links">Live</div>
                 <div className="nav-links">Help</div>
-                <div className="nav-links" onClick={redirectPage}>SignOut</div>
+                <div className="nav-links" onClick={redirectPageToLogin}>SignOut</div>
             </nav>
             <header className="intro">
                 <div className="intro-head">
@@ -45,11 +51,11 @@ export default function Home({handleSignIn}){
                 <button className="home-btn">EXPLORE TUTORIALS</button>
             </section> */}
             <div className="btn-container">
-                <button className="fe-hero-btn">Frontend Development</button>
+                <button className="fe-hero-btn" onClick={redirectPageToFrontend}>Frontend Development</button>
                 {/* <div className="divider"> */}
                     <img className="divider-icon"src="\icons8-bee-color-96.png" alt="" />
                 {/* </div> */}
-                <button className="ss-hero-btn">Server-side Development</button>
+                <button className="ss-hero-btn">Backend Development</button>
             </div>
             <div className="line-layout">
                 <hr  className="line-1"/>
