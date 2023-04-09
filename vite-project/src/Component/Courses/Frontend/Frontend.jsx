@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import YouTube from "react-youtube";
-import "./Tutorial.css";
+import "./frontend.css";
 
 const apiKey = process.env.apikey //dotenv file in file structure. Also bundled by vite in the config file
 
-const Tutorial = ({ type }) => {
+const Frontend = ({ type }) => {
   const [videoList, setVideoList] = useState([]);
   const [activeVideo, setActiveVideo] = useState(null);
   const [completedVideos, setCompletedVideos] = useState([]);
@@ -84,4 +84,4 @@ const Tutorial = ({ type }) => {
   );
 };
 
-export default Tutorial;
+export default Frontend;
