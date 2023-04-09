@@ -1,0 +1,110 @@
+.tutorial-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .tutorial-list {
+    margin-right: 20px;
+  }
+  
+  .tutorial-list h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .tutorial-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .tutorial-list li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .tutorial-list li:hover {
+    text-decoration: underline;
+  }
+  
+  .tutorial-videos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex: 1;
+  }
+  
+  .video-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .tutorial-video {
+    width: 300px;
+    height: 200px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .tutorial-video:hover {
+    box-shadow: 0px 0px 5px #999;
+  }
+  
+  .thumbnail-container {
+    position: relative;
+  }
+  
+  .thumbnail-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  
+  .completed-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+  }
+  
+  .completed-overlay i {
+    font-size: 18px;
+  }
+  
+  .tutorial-video p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .tutorial-video.active {
+    border: 2px solid #4caf50;
+  }
+  
+  .tutorial-video.completed {
+    opacity: 0.5;
+  }
+  
+  .video-player {
+    width: 640px;
+    height: 390px;
+  }
+  
