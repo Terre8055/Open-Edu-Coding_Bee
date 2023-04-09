@@ -4,6 +4,8 @@ import Register from "./Component/Register/Register";
 import Home from "./Component/Homepage/Home";
 import Login from "./Component/Login/Login";
 import Frontend from "./Component/Courses/Frontend/Frontend";
+import Backend from "./Component/Courses/Backend/Backend";
+
 
 
 function App(){
@@ -18,6 +20,7 @@ function App(){
       {Route === "Register" ? <Register handleSignIn={handleSignIn} /> : null}
       {Route === "Home" ? <Home handleSignIn={handleSignIn} /> : null}
       {Route === 'Frontend'? < Frontend />: null}
+      {Route === 'Backend'? < Backend />: null}
     </>
   )
 }

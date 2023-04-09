@@ -12,6 +12,11 @@ export default function Home({handleSignIn}){
         handleSignIn('Frontend')
     }
 
+    
+    const redirectPageToBackend = (e) => {
+        handleSignIn('Backend')
+    }
+
 
     return(
         <>
@@ -55,7 +60,7 @@ export default function Home({handleSignIn}){
                 {/* <div className="divider"> */}
                     <img className="divider-icon"src="\icons8-bee-color-96.png" alt="" />
                 {/* </div> */}
-                <button className="ss-hero-btn">Backend Development</button>
+                <button className="ss-hero-btn" onClick={redirectPageToBackend}>Backend Development</button>
             </div>
             <div className="line-layout">
                 <hr  className="line-1"/>
