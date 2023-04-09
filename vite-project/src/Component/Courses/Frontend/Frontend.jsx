@@ -2,32 +2,54 @@ import React, { useState, useEffect } from "react";
 import YouTube from "react-youtube";
 import "./frontend.css";
 
-const apiKey = process.env.apikey //dotenv file in file structure. Also bundled by vite in the config file
+const apiKey = process.env.API_KEY
+
+
+/**
+ * Component that renders a list of tutorial videos and a video player.
+ * @param {string} type - The type of tutorials to fetch from YouTube API (e.g. "html tutorial").
+ * @returns {JSX.Element} The frontend component.
+ */
 
 const Frontend = ({ type }) => {
   const [videoList, setVideoList] = useState([]);
   const [activeVideo, setActiveVideo] = useState(null);
   const [completedVideos, setCompletedVideos] = useState([]);
+  const [currentType, setType] = useState(type);
 
+
+// Fetch videos from YouTube API based on the current type of tutorials
   useEffect(() => {
     const fetchVideos = async () => {
       const response = await fetch(
-        `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${type}&type=video&key=${apiKey}`
+        `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${currentType}&type=video&key=${apiKey}`
       );
       const json = await response.json();
       setVideoList(json.items);
     };
     fetchVideos();
-  }, [type]);
+  }, [currentType]);
 
   const handleVideoEnd = (videoId) => {
     setCompletedVideos([...completedVideos, videoId]);
   };
 
+
+  // Event handler for when a video is clicked to be played
   const handleVideoPlay = (videoId) => {
     setActiveVideo(videoId);
   };
 
+
+    // Event handler for when the type of tutorials is changed
+  const handleTypeChange = (newType) => {
+    setActiveVideo(null);
+    setCompletedVideos([]);
+    setVideoList([]);
+    setType(newType);
+  };
+
+    // Renders the list of videos
   const renderVideoList = () => {
     return videoList.map((video) => (
       <div
@@ -50,6 +72,7 @@ const Frontend = ({ type }) => {
     ));
   };
 
+  // Options for the YouTube player
   const opts = {
     height: "390",
     width: "640",
@@ -61,11 +84,13 @@ const Frontend = ({ type }) => {
   return (
     <div className="tutorial-container">
       <div className="tutorial-list">
-        <h2>Tutorial List</h2>
+        <h2>Browse Lessons</h2>
         <ul>
-          <li onClick={() => setType("html")}>HTML Tutorial</li>
-          <li onClick={() => setType("css")}>CSS Tutorial</li>
-          <li onClick={() => setType("reactjs")}>ReactJS Tutorial</li>
+          <li onClick={() => handleTypeChange("html tutorial")}>HTML</li>
+          <li onClick={() => handleTypeChange("css tutorials")}>CSS</li>
+          <li onClick={() => handleTypeChange("javascript")}>JavaScript</li>
+          <li onClick={() => handleTypeChange("reactjs tutorials and projects")}>ReactJS</li>
+
         </ul>
       </div>
       <div className="tutorial-videos">
