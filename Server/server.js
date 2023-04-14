@@ -24,5 +24,10 @@ app.use(bodyParser.json())
 app.use('/auth', router)
 app.use(errorHandler)
 
+// set views directory to 'views'
+app.set('views', './views')
+
+// set the view engine to 'pug'
+app.set('view engine', 'pug')
 
 app.listen(port, () => console.log('Connected to server on port'))
